@@ -1,20 +1,12 @@
 pipeline {
     agent any
-
+    
     stages {
-        stage('Build') {
+        stage("Clone Repo"){
             steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                echo "cloning"
+                sh "git clone -b custom-basic-web1 git@github.com:sachin9698/devops-project1.git"
+                //
             }
         }
     }
