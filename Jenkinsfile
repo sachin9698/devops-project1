@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage("Clone Repo"){
+        stage("docker build"){
             steps {
-                sh "docker ps" 
+                sh "docker build -t custom-web:v1 ."
+                sh "docker run --name custom-web1 -d -p 8081:80 custom-web:v1"
             }
         }
         stage("Clean Up"){
