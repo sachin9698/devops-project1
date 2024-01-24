@@ -11,7 +11,6 @@ pipeline {
         stage("docker build"){
             steps {
                 sh "docker build -t custom-web:v1 ."
-                sh "docker run --name custom-web1 -d -p 8081:80 custom-web:v1"
             }
         }
         stage("docker deploy"){
