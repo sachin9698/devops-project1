@@ -5,7 +5,7 @@ pipeline {
         stage("Clone Repo"){
             steps {
                 sh "pwd" 
-                echo "hello"
+                echo "hello 1"
             }
         }
     }
