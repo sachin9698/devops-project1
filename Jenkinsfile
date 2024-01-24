@@ -7,5 +7,12 @@ pipeline {
                 sh "ls -al" 
             }
         }
+        stage("Clean Up"){
+            steps {
+                deleteDir()
+                sh "ls -al" 
+            }
+        }
     }
+    
 }
