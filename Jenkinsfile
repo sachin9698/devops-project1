@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("Clone Repo"){
             steps {
-                sh "ls -al" 
+                sh "docker --version" 
             }
         }
         stage("Clean Up"){
