@@ -6,6 +6,7 @@ pipeline {
             steps {
                 sh "docker rm -f custom-web1"
                 sh "docker image rm -f custom-web:v1"
+                echo "cleaup done"
             }
         }
         stage("docker build"){
