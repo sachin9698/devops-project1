@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("Clone Repo"){
             steps {
-                sh "docker images" 
+                sh "docker ps" 
             }
         }
         stage("Clean Up"){
